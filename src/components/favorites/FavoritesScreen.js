@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, FlatList, StyleSheet, Pressable } from 'react-native';
+import { View, FlatList, StyleSheet } from 'react-native';
 import FavoritesEmptyState from './FavoritesEmptyState';
 import CoinsItem from '../coins/CoinsItem';
 import Colors from '../../res/colors';
