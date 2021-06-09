@@ -15,7 +15,7 @@ const NewUserScreen = () => {
         <View style={styles.container}>
             <TextInput
                 style={styles.input}
-                placeholder="Username"
+                placeholder="User"
                 placeholderTextColor={'#FEFEFE'}
                 onChangeText={text => setUser(text)}
             />
