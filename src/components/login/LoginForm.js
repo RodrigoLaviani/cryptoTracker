@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Pressable, View, TextInput, Text, StyleSheet } from 'react-native';
 import store from '../../libs/store';
 import styles from '../../res/formStyle';
 
 const LoginForm = () => {
+    const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
+
     const handlerLogin = () => {
         store.dispatch({ type: 'LOGIN' });
     }

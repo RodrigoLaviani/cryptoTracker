@@ -5,8 +5,11 @@ import styles from '../../res/formStyle';
 
 
 const NewPasswordScreen = () => {
-    const [user, setUser] = useState('');
-    const [password, setPassword] = useState('');
+    const [passwords, setPassword] = useState({
+        old: '',
+        new: '',
+        repeat: ''
+    });
 
     const handlerLogin = () => {
         store.dispatch({ type: 'LOGIN' });
@@ -18,21 +21,21 @@ const NewPasswordScreen = () => {
                 style={styles.input}
                 placeholder="Old Password"
                 placeholderTextColor={'#FEFEFE'}
-                onChangeText={text => setUser(text)}
+                onChangeText={text => setPassword({ old: text })}
             />
             <TextInput
                 style={styles.input}
                 secureTextEntry={true}
                 placeholder="New Password"
                 placeholderTextColor={'#FEFEFE'}
-                onChangeText={text => setPassword(text)}
+                onChangeText={text => setPassword({ new: text })}
             />
             <TextInput
                 style={styles.input}
                 secureTextEntry={true}
                 placeholder="Repeat Password"
                 placeholderTextColor={'#FEFEFE'}
-                onChangeText={text => setPassword(text)}
+                onChangeText={text => setPassword({ repeat: text })}
             />
             <Pressable
                 style={styles.button}
