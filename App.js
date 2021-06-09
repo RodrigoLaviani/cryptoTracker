@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import CoinsStack from './src/components/coins/CoinsStack';
 import FavoritesStack from './src/components/favorites/FavoritesStack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Colors from './src/res/colors';
-import LoginScreen from './src/components/login/LoginScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import store from './src/libs/store';
+import LoginStack from './src/components/login/LoginStack';
 
 
 const Tabs = createBottomTabNavigator();
@@ -30,8 +30,8 @@ const App = () => {
               headerShown: false
             }}>
             <Stack.Screen
-              name={'Login'}
-              component={LoginScreen}
+              name='Login'
+              component={LoginStack}
             />
           </Stack.Navigator>
           :

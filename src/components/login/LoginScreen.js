@@ -3,20 +3,18 @@ import { View, Pressable, Text, StyleSheet } from 'react-native';
 import LoginForm from './LoginForm';
 import Colors from '../../res/colors';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
 
     const handlerNewPassword = () => {
-
+        navigation.navigate('Change Password');
     }
 
     const handlerNewUser = () => {
-
+        navigation.navigate('NewUser');
     }
 
     return (
-        <View
-            style={styles.conteiner}
-        >
+        <View style={styles.conteiner}>
             <Text style={styles.titleText}>Cryptotracker</Text>
             <LoginForm></LoginForm>
             <Pressable
