@@ -8,11 +8,11 @@ const NewUserScreen = () => {
     const [passwords, setPassword] = useState({
         new: '',
         repeat: ''
-    });
+    })
 
     const handlerLogin = () => {
         store.dispatch({ type: 'LOGIN' });
-    }
+    };
 
     return (
         <View style={styles.container}>
