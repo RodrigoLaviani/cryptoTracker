@@ -4,7 +4,7 @@ import store from '../../libs/store';
 import styles from '../../res/formStyle';
 
 const NewUserScreen = () => {
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState('')
     const [passwords, setPassword] = useState({
         new: '',
         repeat: ''
